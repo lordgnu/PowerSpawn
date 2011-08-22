@@ -18,6 +18,7 @@ class PowerSpawn {
 	private	$myChildren;
 	private	$parentPID;
 	private	$shutdownCallback = null;
+	private $killCallback = null;
 
 	public	$maxChildren	=	10;		// Max number of children allowed to Spawn
 	public	$timeLimit		=	0;		// Time limit in seconds (0 to disable)
@@ -86,6 +87,7 @@ class PowerSpawn {
 	public function killChild($pid = 0) {
 		if ($pid > 0) {
 			posix_kill($pid, SIGTERM);
+			if ($this->killCallback !== null) call_user_func($this->killCallback);
 		}
 	}
 
@@ -107,6 +109,10 @@ class PowerSpawn {
 
 	public function setCallback($callback = null) {
 		$this->shutdownCallback = $callback;
+	}
+	
+	public function setKillCallback($callback = null) {
+		$this->killCallback = $callback;
 	}
 
 	public function childCount() {

@@ -97,3 +97,154 @@ if ($ps->runChildCode()) {
 exit(0);
 
 ?>
+
+
+
+OUPUT FROM EXAMPLE:
+dbauer@zent:~/src/PowerSpawn$ php ./example.php 
+PHP Deprecated:  Comments starting with '#' are deprecated in /etc/php5/cli/conf.d/mcrypt.ini on line 1 in Unknown on line 0
+[PARENT] Spawning a new process
+[PARENT] Spawning a new process
+[CHILD:0] Running with number 0 - My PID is 22174
+[CHILD:0] I have completed my work
+[PARENT] Spawning a new process
+[CHILD:1] Running with number 1 - My PID is 22175
+[PARENT] Spawning a new process
+[CHILD:2] Running with number 2 - My PID is 22176
+[PARENT] Spawning a new process
+[CHILD:3] Running with number 3 - My PID is 22177
+[CHILD:4] Running with number 4 - My PID is 22178
+[PARENT] Spawning a new process
+[CHILD:5] Running with number 5 - My PID is 22179
+[CHILD:1] Just completed iteration 1 of 1
+[CHILD:1] I have completed my work
+[CHILD:2] Just completed iteration 1 of 2
+[CHILD:3] Just completed iteration 1 of 3
+[CHILD:4] Just completed iteration 1 of 4
+[PARENT] Spawning a new process
+[CHILD:5] Just completed iteration 1 of 5
+[CHILD:6] Running with number 6 - My PID is 22180
+[CHILD:2] Just completed iteration 2 of 2
+[CHILD:2] I have completed my work
+[CHILD:3] Just completed iteration 2 of 3
+[CHILD:4] Just completed iteration 2 of 4
+[CHILD:5] Just completed iteration 2 of 5
+[PARENT] Spawning a new process
+[CHILD:6] Just completed iteration 1 of 6
+[CHILD:7] Running with number 7 - My PID is 22181
+[CHILD:3] Just completed iteration 3 of 3
+[CHILD:3] I have completed my work
+[CHILD:4] Just completed iteration 3 of 4
+[CHILD:5] Just completed iteration 3 of 5
+[CHILD:6] Just completed iteration 2 of 6
+[CHILD:7] Just completed iteration 1 of 7
+[PARENT] Spawning a new process
+[CHILD:8] Running with number 8 - My PID is 22182
+[CHILD:4] Just completed iteration 4 of 4
+[CHILD:4] I have completed my work
+[CHILD:5] Just completed iteration 4 of 5
+[CHILD:6] Just completed iteration 3 of 6
+[CHILD:7] Just completed iteration 2 of 7
+[CHILD:8] Just completed iteration 1 of 8
+[PARENT] Spawning a new process
+[CHILD:9] Running with number 9 - My PID is 22183
+[CHILD:5] Just completed iteration 5 of 5
+[CHILD:5] I have completed my work
+[CHILD:6] Just completed iteration 4 of 6
+[CHILD:7] Just completed iteration 3 of 7
+[CHILD:8] Just completed iteration 2 of 8
+[CHILD:9] Just completed iteration 1 of 9
+[PARENT] Spawning a new process
+[CHILD:10] Running with number 10 - My PID is 22184
+[CHILD:6] Just completed iteration 5 of 6
+[CHILD:7] Just completed iteration 4 of 7
+[CHILD:8] Just completed iteration 3 of 8
+[CHILD:9] Just completed iteration 2 of 9
+[CHILD:10] Just completed iteration 1 of 10
+[CHILD:6] Just completed iteration 6 of 6
+[CHILD:6] I have completed my work
+[CHILD:7] Just completed iteration 5 of 7
+[CHILD:8] Just completed iteration 4 of 8
+[CHILD:9] Just completed iteration 3 of 9
+[PARENT] Spawning a new process
+[CHILD:10] Just completed iteration 2 of 10
+[CHILD:11] Running with number 11 - My PID is 22185
+[CHILD:7] Just completed iteration 6 of 7
+[CHILD:8] Just completed iteration 5 of 8
+[CHILD:9] Just completed iteration 4 of 9
+[CHILD:10] Just completed iteration 3 of 10
+[CHILD:11] Just completed iteration 1 of 11
+[CHILD:7] Just completed iteration 7 of 7
+[CHILD:7] I have completed my work
+[CHILD:8] Just completed iteration 6 of 8
+[CHILD:9] Just completed iteration 5 of 9
+[PARENT] Spawning a new process
+[CHILD:10] Just completed iteration 4 of 10
+[CHILD:11] Just completed iteration 2 of 11
+[CHILD:12] Running with number 12 - My PID is 22186
+[CHILD:8] Just completed iteration 7 of 8
+[CHILD:9] Just completed iteration 6 of 9
+[CHILD:10] Just completed iteration 5 of 10
+[CHILD:11] Just completed iteration 3 of 11
+[CHILD:12] Just completed iteration 1 of 12
+[CHILD:8] Just completed iteration 8 of 8
+[CHILD:8] I have completed my work
+[CHILD:9] Just completed iteration 7 of 9
+[CHILD:10] Just completed iteration 6 of 10
+[CHILD:11] Just completed iteration 4 of 11
+[CHILD:12] Just completed iteration 2 of 12
+[PARENT] Spawning a new process
+[CHILD:13] Running with number 13 - My PID is 22188
+[CHILD:9] Just completed iteration 8 of 9
+[CHILD:10] Just completed iteration 7 of 10
+[CHILD:11] Just completed iteration 5 of 11
+[CHILD:12] Just completed iteration 3 of 12
+[CHILD:13] Just completed iteration 1 of 13
+[CHILD:9] Just completed iteration 9 of 9
+[CHILD:9] I have completed my work
+[CHILD:11] Just completed iteration 6 of 11
+[CHILD:10] Just completed iteration 8 of 10
+[CHILD:12] Just completed iteration 4 of 12
+[CHILD:13] Just completed iteration 2 of 13
+[PARENT] Spawning a new process
+[PARENT] Out of data to hand out - Waiting for all children to check in
+[CHILD:14] Running with number 14 - My PID is 22189
+[CHILD:10] Just completed iteration 9 of 10
+[CHILD:11] Just completed iteration 7 of 11
+[CHILD:12] Just completed iteration 5 of 12
+[CHILD:13] Just completed iteration 3 of 13
+[CHILD:14] Just completed iteration 1 of 14
+[CHILD:10] Just completed iteration 10 of 10
+[CHILD:11] Just completed iteration 8 of 11
+[CHILD:10] I have completed my work
+[CHILD:12] Just completed iteration 6 of 12
+[CHILD:13] Just completed iteration 4 of 13
+A child was just killed
+[CHILD:14] Just completed iteration 2 of 14
+[CHILD:11] Just completed iteration 9 of 11
+[CHILD:12] Just completed iteration 7 of 12
+[CHILD:13] Just completed iteration 5 of 13
+[CHILD:14] Just completed iteration 3 of 14
+[CHILD:11] Just completed iteration 10 of 11
+[CHILD:12] Just completed iteration 8 of 12
+[CHILD:13] Just completed iteration 6 of 13
+[CHILD:14] Just completed iteration 4 of 14
+A child was just killed
+[CHILD:12] Just completed iteration 9 of 12
+[CHILD:13] Just completed iteration 7 of 13
+[CHILD:14] Just completed iteration 5 of 14
+[CHILD:12] Just completed iteration 10 of 12
+[CHILD:13] Just completed iteration 8 of 13
+[CHILD:14] Just completed iteration 6 of 14
+A child was just killed
+[CHILD:13] Just completed iteration 9 of 13
+[CHILD:14] Just completed iteration 7 of 14
+[CHILD:13] Just completed iteration 10 of 13
+[CHILD:14] Just completed iteration 8 of 14
+A child was just killed
+[CHILD:14] Just completed iteration 9 of 14
+[CHILD:14] Just completed iteration 10 of 14
+A child was just killed
+[PARENT] All child processes have completed
+All the children processes have completed
+
