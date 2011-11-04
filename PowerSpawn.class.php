@@ -9,7 +9,7 @@
  * Author:	Don Bauer
  * E-Mail:	lordgnu@me.com
  *
- * Date:	2010-03-30
+ * Date:	2011-11-04
  */
 
 declare(ticks = 1);
@@ -22,7 +22,7 @@ class PowerSpawn {
 
 	public	$maxChildren	=	10;		// Max number of children allowed to Spawn
 	public	$timeLimit		=	0;		// Time limit in seconds (0 to disable)
-	public	$sleepCount	=	1;			// Number of seconds to sleep on Tick()
+	public	$sleepCount	=	100;		// Number of uSeconds to sleep on Tick()
 
 	public	$childData;					// Variable for storage of data to be passed to the next spawned child
 	public	$complete;
@@ -52,6 +52,15 @@ class PowerSpawn {
 				break;
 		}
 	}
+	
+	public function getChildStatus($name = false) {
+		if ($name === false) return false;
+		if (isset($this->myChildren[$name])) {
+			return $this->myChildren[$name];
+		} else {
+			return false;
+		}
+	}
 
 	public function checkChildren() {
 		foreach ($this->myChildren as $i => $child) {
@@ -78,10 +87,16 @@ class PowerSpawn {
 		return posix_getppid();
 	}
 
-	public function spawnChild() {
+	public function spawnChild($name = false) {
 		$time = time();
 		$pid = pcntl_fork();
-		if ($pid) $this->myChildren[] = array('time'=>$time,'pid'=>$pid);
+		if ($pid) {
+			if ($name !== false) {
+				$this->myChildren[$name] = array('time'=>$time,'pid'=>$pid);
+			} else {
+				$this->myChildren[] = array('time'=>$time,'pid'=>$pid);
+			}
+		}
 	}
 
 	public function killChild($pid = 0) {
@@ -150,7 +165,15 @@ class PowerSpawn {
 	}
 
 	public function tick() {
-		sleep($this->sleepCount);
+		usleep($this->sleepCount);
+	}
+	
+	public function exec($proc, $args = null) {
+		if ($args == null) {
+			pcntl_exec($proc);
+		} else {
+			pcntl_exec($proc, $args);
+		}
 	}
 }
 
