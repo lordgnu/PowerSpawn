@@ -3,6 +3,13 @@ ABOUT
 	
 	It is for managing and running forked process for parrallel computing with PHP
 
+NOTE
+	PowerSpawn has been replaced by PowerProcess which can be found here: https://github.com/lordgnu/PowerProcess
+	
+	PowerProcess contains all the same features as PowerSpawn, but is easier to use and has more robust support
+	of the PCNTL functions.  Additionally, PowerProcess allows simple daemonization of scripts and supports better
+	socket-based logging
+
 HOW TO USE
 	First, be sure to include PowerSpawn in your source: require_once('/path/to/PowerSpawn.class.php')
 	
